@@ -1,0 +1,42 @@
+{
+    "name": "md0/backpack-regenerator",
+    "description": "Laravel ReGenerator for Backpack",
+    "license": "AGPL-3.0",
+    "authors": [
+        {
+            "name": "Matei Dobrescu",
+            "email": "contact@md0.ro"
+        }
+    ],
+    "homepage": "https://github.com/md0-code/backpack-regenerator",
+    "keywords": [
+        "Laravel", "ReGenerator", "Backpack", "report generator"
+    ],
+    "require": {
+        "backpack/crud": "^4.1.0",
+        "dompdf/dompdf": "^1.0.0",
+        "md0/regenerator": "dev-main"
+    },
+    "require-dev": {
+    },
+    "autoload": {
+        "psr-4": {
+            "MD0\\BackpackReGenerator\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "MD0\\BackpackReGenerator\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit --testdox"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "MD0\\BackpackReGenerator\\BackpackReGeneratorServiceProvider"
+            ]
+        }
+    }
+}
